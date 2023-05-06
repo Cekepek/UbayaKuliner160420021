@@ -51,17 +51,7 @@
                 android:layout_marginTop="16dp"
                 android:text="TextView"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/txtRatings"
-                app:layout_constraintTop_toBottomOf="@+id/txtNamaResto" />
-
-            <TextView
-                android:id="@+id/txtRatings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:text="TextView"
-                app:layout_constraintStart_toEndOf="@+id/imgResto"
+                app:layout_constraintStart_toEndOf="@+id/ratingBarList"
                 app:layout_constraintTop_toBottomOf="@+id/txtNamaResto" />
 
             <TextView
@@ -83,6 +73,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:srcCompat="@tools:sample/avatars" />
+
+            <RatingBar
+                android:id="@+id/ratingBarList"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@+id/imgResto"
+                app:layout_constraintTop_toBottomOf="@+id/txtNamaResto" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
@@ -27,8 +28,8 @@ class RestaurantListAdapter(val restaurantList:ArrayList<Restaurant>)
     override fun onBindViewHolder(holder: RestaurantViewHolder, position: Int){
         val txtNama = holder.view.findViewById<TextView>(R.id.txtNamaResto) // karena ada 2 id text view yang txtID maka pakai gini dan class nya ga nyambung ke layout apa-apa
         txtNama.text = restaurantList[position].name
-        val txtRating = holder.view.findViewById<TextView>(R.id.txtRatings)
-        txtRating.text = "Rating "+restaurantList[position].rating.toString()
+        val ratingBar = holder.view.findViewById<RatingBar>(R.id.ratingBarList)
+        ratingBar.rating = restaurantList[position].rating
         val txtReview = holder.view.findViewById<TextView>(R.id.txtReviews)
         txtReview.text = restaurantList[position].totalReviews.toString()+" Reviews"
         val image  = holder.view.findViewById<ImageView>(R.id.imgResto)
@@ -40,7 +41,7 @@ class RestaurantListAdapter(val restaurantList:ArrayList<Restaurant>)
             restaurantList[position].id?.let{
                 id = it
             }
-            val action = MainFragmentDirections.actionRestaurantDetail()
+            val action = MainFragmentDirections.actionRestaurantDetail(id)
             Navigation.findNavController(it).navigate(action)
         }
     }

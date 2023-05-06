@@ -12,7 +12,7 @@ data class Restaurant (
     val description:String?,
     @SerializedName("photo")
     val photoUrl:String?,
-    val rating:Double,
+    val rating:Float,
     @SerializedName("review")
     val totalReviews:Integer
 )
