@@ -30,8 +30,8 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
         btnLogin.setOnClickListener {
-            viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
             viewModel.fetch(txtId.text.toString(), txtPassword.text.toString())
             viewModel.accountLD.observe(viewLifecycleOwner, Observer{
                 if(it.isNotEmpty()){
@@ -39,7 +39,7 @@ class LoginFragment : Fragment() {
                     Navigation.findNavController(view).navigate(action)
                 }
                 else{
-                    Toast.makeText(activity,"Username/Password Salah",Toast.LENGTH_SHORT).show()
+                    txtErrorMessage.text = "Username/Password Salah"
                 }
             })
         }
