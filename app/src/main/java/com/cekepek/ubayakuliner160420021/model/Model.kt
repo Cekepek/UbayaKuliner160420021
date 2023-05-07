@@ -16,3 +16,9 @@ data class Restaurant (
     @SerializedName("review")
     val totalReviews:Integer
 )
+
+data class Account (
+    val id:String?,
+    val username:String?,
+    val password:String?
+)
