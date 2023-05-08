@@ -100,7 +100,18 @@
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
                 tools:src="@tools:sample/avatars" />
+
         </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/progressBarProfile"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="@+id/cardView"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="@+id/cardView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

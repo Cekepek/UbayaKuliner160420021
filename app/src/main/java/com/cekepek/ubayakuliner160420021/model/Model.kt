@@ -20,7 +20,11 @@ data class Restaurant (
 data class Account (
     val id:String?,
     val username:String?,
-    val password:String?
+    val password:String?,
+    val name: String?,
+    val studentId:String?,
+    val phone:String?,
+    val profilePic:String?
 )
 
 data class Review (
