@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.cekepek.ubayakuliner160420021.R
 import com.cekepek.ubayakuliner160420021.model.Restaurant
 import com.cekepek.ubayakuliner160420021.util.loadImage
@@ -32,6 +33,10 @@ class DetailFragment : Fragment() {
             val restaurantId = DetailFragmentArgs.fromBundle(requireArguments()).restaurantId
             viewModel.fetch(restaurantId)
             observeViewModel()
+            btnCekReview.setOnClickListener {
+                val action = DetailFragmentDirections.actionReviewFragment(restaurantId)
+                Navigation.findNavController(it).navigate(action)
+            }
         }
 
     }

@@ -22,3 +22,10 @@ data class Account (
     val username:String?,
     val password:String?
 )
+
+data class Review (
+    val id:String?,
+    val username:String?,
+    val review:String?,
+    val restoId:String?
+        )

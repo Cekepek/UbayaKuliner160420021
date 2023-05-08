@@ -35,6 +35,7 @@ class LoginFragment : Fragment() {
             viewModel.fetch(txtId.text.toString(), txtPassword.text.toString())
             viewModel.accountLD.observe(viewLifecycleOwner, Observer{
                 if(it.isNotEmpty()){
+                    id
                     val action = LoginFragmentDirections.actionMainFragment()
                     Navigation.findNavController(view).navigate(action)
                 }
