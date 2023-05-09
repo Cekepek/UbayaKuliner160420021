@@ -37,7 +37,9 @@ class DetailFragment : Fragment() {
                 val action = DetailFragmentDirections.actionReviewFragment(restaurantId)
                 Navigation.findNavController(it).navigate(action)
             }
+
         }
+
 
     }
 
@@ -51,6 +53,10 @@ class DetailFragment : Fragment() {
             txtDetailPhone.setText(restaurant[0].phoneNum)
             ratingBarDetail.rating = restaurant[0].rating
             imgDetailResto.loadImage(restaurant[0].photoUrl,progressBarDetail)
+            btnReserve.setOnClickListener {
+                val action = DetailFragmentDirections.actionReservasi(restaurant[0].name.toString())
+                Navigation.findNavController(it).navigate(action)
+            }
         })
     }
 }

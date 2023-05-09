@@ -115,5 +115,19 @@
             android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtDetailPhone" />
+
+        <Button
+            android:id="@+id/btnReserve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:layout_marginEnd="16dp"
+            android:text="Reservasi"
+            app:layout_constraintBottom_toTopOf="@+id/txtDesc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.39"
+            app:layout_constraintStart_toEndOf="@+id/btnCekReview"
+            app:layout_constraintTop_toBottomOf="@+id/imgDetailResto"
+            app:layout_constraintVertical_bias="0.272" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
