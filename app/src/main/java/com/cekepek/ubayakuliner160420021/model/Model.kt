@@ -14,7 +14,8 @@ data class Restaurant (
     val photoUrl:String?,
     val rating:Float,
     @SerializedName("review")
-    val totalReviews:Integer
+    val totalReviews:Integer,
+    val favorite:Boolean
 )
 
 data class Account (
@@ -32,4 +33,9 @@ data class Review (
     val username:String?,
     val review:String?,
     val restoId:String?
+        )
+
+data class Favorite (
+    val id:String?,
+    val restoId: String?
         )
