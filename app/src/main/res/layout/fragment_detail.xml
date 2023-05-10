@@ -48,8 +48,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:text="Cek Review"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintEnd_toStartOf="@+id/btnReserve"
             app:layout_constraintStart_toEndOf="@+id/ratingBarDetail"
             app:layout_constraintTop_toBottomOf="@+id/txtDetailPhone" />
 
@@ -69,10 +68,13 @@
             android:id="@+id/txtDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
             android:text="TextView"
             android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnCekReview" />
 
@@ -92,7 +94,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
             android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/txtDetailNama" />
 
@@ -102,7 +107,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
             android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toBottomOf="@+id/txtAlamat" />
 
@@ -120,14 +128,10 @@
             android:id="@+id/btnReserve"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="64dp"
             android:text="Reservasi"
             app:layout_constraintBottom_toTopOf="@+id/txtDesc"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.39"
-            app:layout_constraintStart_toEndOf="@+id/btnCekReview"
-            app:layout_constraintTop_toBottomOf="@+id/imgDetailResto"
-            app:layout_constraintVertical_bias="0.272" />
+            app:layout_constraintTop_toBottomOf="@+id/txtDetailPhone" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

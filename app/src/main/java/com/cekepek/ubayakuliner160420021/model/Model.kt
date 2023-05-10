@@ -36,8 +36,3 @@ data class Review (
     val review:String?,
     val restoId:String?
         )
-
-data class Favorite (
-    val id:String?,
-    val restoId: String?
-        )

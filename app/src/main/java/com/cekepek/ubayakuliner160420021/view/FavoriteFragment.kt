@@ -9,12 +9,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.cekepek.ubayakuliner160420021.R
-import com.cekepek.ubayakuliner160420021.model.Favorite
-import com.cekepek.ubayakuliner160420021.model.Restaurant
 import com.cekepek.ubayakuliner160420021.viewmodel.FavoriteViewModel
-import com.cekepek.ubayakuliner160420021.viewmodel.ListViewModel
 import kotlinx.android.synthetic.main.fragment_favorite.*
-import kotlinx.android.synthetic.main.fragment_main.*
 
 class FavoriteFragment : Fragment() {
 
