@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import com.cekepek.ubayakuliner160420021.R
 import com.cekepek.ubayakuliner160420021.util.loadImage
 import com.cekepek.ubayakuliner160420021.viewmodel.ProfileViewModel
@@ -39,6 +40,11 @@ class ProfileFragment : Fragment() {
             txtStudentId.setText(it.studentId)
             txtPhone.setText(it.phone)
             imgProfile.loadImage(it.profilePic,progressBarProfile)
+            val userId = it.id
+            btnYourReview.setOnClickListener {
+                val action = ProfileFragmentDirections.actionYourReview(userId)
+                Navigation.findNavController(it).navigate(action)
+            }
         })
     }
 }

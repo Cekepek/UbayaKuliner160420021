@@ -50,9 +50,9 @@ class RestaurantListAdapter(val restaurantList:ArrayList<Restaurant>)
         return restaurantList.size
     }
 
-    fun updateRestaurantList(newStudentList: ArrayList<Restaurant>) {
+    fun updateRestaurantList(newRestaurantList: ArrayList<Restaurant>) {
         restaurantList.clear()
-        restaurantList.addAll(newStudentList)
+        restaurantList.addAll(newRestaurantList)
         notifyDataSetChanged()
     }
 }

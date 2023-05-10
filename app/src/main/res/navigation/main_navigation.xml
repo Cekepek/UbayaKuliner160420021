@@ -29,15 +29,6 @@
             app:destination="@id/reservasiFragment" />
     </fragment>
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.cekepek.ubayakuliner160420021.view.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/actionMainFragment"
-            app:destination="@id/itemHome" />
-    </fragment>
-    <fragment
         android:id="@+id/reviewFragment"
         android:name="com.cekepek.ubayakuliner160420021.view.ReviewFragment"
         android:label="Review"
@@ -50,7 +41,11 @@
         android:id="@+id/itemProfile"
         android:name="com.cekepek.ubayakuliner160420021.view.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/actionYourReview"
+            app:destination="@id/yourReviewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/itemFavorite"
         android:name="com.cekepek.ubayakuliner160420021.view.FavoriteFragment"
@@ -89,5 +84,29 @@
         <action
             android:id="@+id/actionBack"
             app:destination="@id/itemHome" />
+    </fragment>
+    <fragment
+        android:id="@+id/yourReviewFragment"
+        android:name="com.cekepek.ubayakuliner160420021.view.YourReviewFragment"
+        android:label="Your Review"
+        tools:layout="@layout/fragment_your_review">
+        <argument
+            android:name="user_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionCekReviewed"
+            app:destination="@id/cekYourReviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cekYourReviewFragment"
+        android:name="com.cekepek.ubayakuliner160420021.view.CekYourReviewFragment"
+        android:label="Your Review"
+        tools:layout="@layout/fragment_cek_your_review">
+        <argument
+            android:name="user_id"
+            app:argType="string" />
+        <argument
+            android:name="restaurant_id"
+            app:argType="string" />
     </fragment>
 </navigation>
